@@ -3,7 +3,7 @@ drop table trip;
 drop table transportaton;
 drop table airplane;
 drop table taxi;
-drop table bus
+drop table bus;
 
 create table stopsBy (
 	transID int,
