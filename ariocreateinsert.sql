@@ -9,6 +9,7 @@ drop table bus;
 (
     tripID int references trip,
     email  char(50) references user,
+    bookDate int,
     primary key (tripID, email)
 );
 
@@ -69,19 +70,19 @@ grant select on taxi to public;
 
 
 /*insert into bookBy
-values (00034, 'abc123@gmail.com');
+values (00034, 'abc123@gmail.com',1603421429);
 
 insert into bookBy
-values (67890212, 'duuw9@yahoo.com');
+values (67890212, 'duuw9@yahoo.com',4603454028);
 
 insert into bookBy
-values (2156365, 'eagl76@gmail.com');
+values (2156365, 'eagl76@gmail.com',1603454028);
 
 insert into bookBy
-values (1414126222, 'duuw9@yahoo.com');
+values (1414126222, 'duuw9@yahoo.com',4603454028);
 
 insert into bookBy
-values (1, 'waf14@mail.com');*/
+values (1, 'waf14@mail.com',1603454028);*/
 
 insert into trip
 values ('sv123', 'Vancouver', 'Tokyo', 1603421429, 1603421430, 1600, 00034);
