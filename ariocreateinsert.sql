@@ -1,9 +1,9 @@
 --drop table bookBy;
 drop table trip;
-drop table transportation;
 drop table airplane;
 drop table taxi;
 drop table bus;
+drop table transportation;
 
 /*create table bookBy
 (
@@ -22,8 +22,8 @@ create table trip
     destination   char(20) not null,
     departureDate int      not null,
     arrivalDate   int      not null,
-    fee: real              not null,
-    transID: int,
+    fee          real      not null,
+    transID      int,
     foreign key (transID) references transportation ON DELETE CASCADE
 );
 
@@ -62,7 +62,6 @@ create table bus
 (
     transID int primary key,
     busLine char(50),
-    primary key (transID),
     foreign key (transID) references transportation ON DELETE CASCADE
 );
 
