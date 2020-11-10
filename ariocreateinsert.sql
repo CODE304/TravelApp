@@ -15,6 +15,16 @@ drop table transportation;
 
 grant select on bookBy to public;*/
 
+create table transportation
+(
+    transID  int primary key,
+    city     char(50) not null,
+    country  char(50) not null,
+    capacity int
+);
+
+grant select on transportation to public;
+
 create table trip
 (
     tripID        char(50) primary key,
@@ -28,16 +38,6 @@ create table trip
 );
 
 grant select on trip to public;
-
-create table transportation
-(
-    transID  int primary key,
-    city     char(50) not null,
-    country  char(50) not null,
-    capacity int
-);
-
-grant select on transportation to public;
 
 create table airplane
 (
@@ -65,7 +65,7 @@ create table bus
     foreign key (transID) references transportation ON DELETE CASCADE
 );
 
-grant select on taxi to public;
+grant select on bus to public;
 
 
 /*insert into bookBy
@@ -83,21 +83,6 @@ values (1414126222, 'duuw9@yahoo.com',4603454028);
 insert into bookBy
 values (1, 'waf14@mail.com',1603454028);*/
 
-insert into trip
-values ('sv123', 'Vancouver', 'Tokyo', 1603421429, 1603421430, 1600, 00034);
-
-insert into trip
-values ('wv987', 'Vancouver', 'Berlin', 1603421429, 1603421430, 6700, 00034);
-
-insert into trip
-values ('vd182', 'Beijing', 'Tokyo', 1603421429, 1603671429, 5555, 04500);
-
-insert into trip
-values ('st234', 'Madrid', 'Buenos Aires', 1603454028, 1603421429, 5, 42060);
-
-insert into trip
-values ('mor918', 'Mordor', 'Skyrim', 4603454028, 5503454028, 69, 10101111111);
-
 insert into transportation
 values (00034, 'Vancouver', 'Canada', 40);
 
@@ -112,6 +97,21 @@ values (42060, 'Honolulu', 'USA', 2);
 
 insert into transportation
 values (10101111111, 'Vancouver', 'Canada', 4);
+
+insert into trip
+values ('sv123', 'Vancouver', 'Tokyo', 1603421429, 1603421430, 1600, 00034);
+
+insert into trip
+values ('wv987', 'Vancouver', 'Berlin', 1603421429, 1603421430, 6700, 00034);
+
+insert into trip
+values ('vd182', 'Beijing', 'Tokyo', 1603421429, 1603671429, 5555, 04500);
+
+insert into trip
+values ('st234', 'Madrid', 'Buenos Aires', 1603454028, 1603421429, 5, 42060);
+
+insert into trip
+values ('mor918', 'Mordor', 'Skyrim', 4603454028, 5503454028, 69, 10101111111);
 
 insert into airplane
 values (10101111111, 'Air Canada', 'Boeing 747');
