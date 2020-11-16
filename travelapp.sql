@@ -262,6 +262,8 @@ create table bookBy(
     bookDate int, 
     primary key (tripID, email));
 
+grant select on bookBy to public; 
+
 insert into userTable
 values('mar_shal@outlook.com', 7786544789, '1509-5100 Granville Street, Vancouver',
 967852800, 'Marshal', 'Squirret', 'Vancouver', 'Canada');
@@ -652,12 +654,12 @@ insert into StopsBy
 values (00035, 'waf14', 203, 0923, 1922);
 
 insert into bookBy
-values ('mor918', 'bill_ager@yahoo.ca',1603421429, 90);
+values ('mor918', 'bill_ager@yahoo.ca',1603421429);
 insert into bookBy
-values ('st234', 'bill_ager@yahoo.ca',4603454028, 5);
+values ('st234', 'bill_ager@yahoo.ca',4603454028);
 insert into bookBy
-values ('mor918', 'wh1tney@gmail.com',1603454028, 10);
+values ('mor918', 'wh1tney@gmail.com',1603454028);
 insert into bookBy
-values ('wv987', 'fauna_16@gmail.com',4603454028, 2);
+values ('wv987', 'fauna_16@gmail.com',4603454028);
 insert into bookBy
-values ('sv123', 'mar_shal@outlook.com',1603454028, 120);
+values ('sv123', 'mar_shal@outlook.com',1603454028);
