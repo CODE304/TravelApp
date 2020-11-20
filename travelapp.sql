@@ -140,14 +140,14 @@ grant select on Schedules to public;
 
 create table Host 
     (email char(50) PRIMARY KEY,
-     phoneNum int unique,
+     phoneNum int,
      dob int);
 
  grant select on Host to public; 
 
 create table Accommodation
     (accID char(30) PRIMARY KEY,
-     addr char(80) unique, 
+     addr char(80), 
      city char(30) not null, 
      country char(30) not null, 
      capacity int,
@@ -384,18 +384,46 @@ values ('canadiehn@shaw.ca', 6042831261, 949363200);
 insert into Host
 values ('enya@gmail.com', 6042831111, 949363200);
 
+insert into Host
+values ('fairmontgal@gmail.com', 5552173622, 949363200);
+
+insert into Host
+values ('cestlefairmont@gmail.com', 555182371, 949363200);
+
 /*Hotels*/ 
 insert into Accommodation
 values ('abc123', '900 W Georgia St', 'Vancouver', 'Canada', 4, 300.00, 'fairmontdude@gmail.com');
 
+insert into Accommodation 
+values ('jdis32', '100 Front St', 'Toronto', 'Canada', 4, 100.00, 'fairmontdude@gmail.com');
+
+insert into Accommodation 
+values ('pa123', '180 Beach St', 'Hawaii', 'USA', 4, 180.00, 'fairmontgal@gmail.com');
+
+insert into Accommodation 
+values ('chri1', '123 Europe Rd', 'Florence', 'Italy', 5, 150.00, 'cestlefairmont@gmail.com');
+
+insert into Accommodation 
+values ('noice91', '883 Pokey St', 'Ottawa', 'Canada', 2, 2530.00, 'canadiehn@shaw.ca');
+
+insert into Accommodation 
+values ('hiw98', '72899 Sing Street', 'New York City', 'USA', 3, 100.00, 'stevebuscemi@fakemail.com');
+
+insert into Accommodation 
+values ('apow1', '8080 Walk St', 'Florence', 'Italy', 7, 200.00, 'enya@gmail.com');
+
+insert into Accommodation 
+values ('ir928', '98765 Madeup Ave', 'Texas', 'USA', 4, 50.00, 'enya@gmail.com');
+
+insert into Accommodation 
+values ('mira982', '871 Benjamin St', 'Whitehorse', 'Canada', 4, 100.00, 'enya@gmail.com');
+
 insert into Accommodation
-values ('duuq9', '2424 Kalakaua Ave', 'Honolulu', 'USA', 2, 431.25, 'hyattservice@gmail.com');
+values ('duuq9', '2424 Kalakaua Ave', 'Honolulu', 'USA', 3, 431.25, 'hyattservice@gmail.com');
+
 
 insert into Accommodation 
 values ('eagl76', 'Boomer Street', 'Los Angeles', 'USA', 4, 100.00, 'hostestofthemostest@hotmail.com');
-
-insert into Accommodation 
-values ('jdis32', '100 Front St', 'Toronto', 'Canada', 4, 100.00, 'fairmontdude@gmail.com');
 
 insert into Accommodation
 values ('waf14', '8510 Prospect St', 'New York City', 'USA', 3, 1234.56, 'stevebuscemi@fakemail.com');
@@ -411,26 +439,29 @@ insert into Accommodation
 values ('pais89', '222 Cold St', 'Squamish', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
 
 insert into Accommodation 
-values ('ja121', '55 Yellow Brick Rd', 'Yellowknife', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
+values ('ja121', '55 Some Street', 'Galway', 'Ireland', 4, 100.00, 'canadiehn@shaw.ca');
 
 insert into Accommodation 
-values ('cpsc304', '666 Some Street', 'Vancouver', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
+values ('cpsc304', '666 Yellow Brick Rd', 'Vancouver', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
+
 
 /*Houses*/
 insert into Accommodation
 values ('no06', '81 Guentzelstrasse St', 'Hosenfeld', 'Germany', 1, 150.00, 'hostestofthemostest@hotmail.com');
 
 insert into Accommodation 
-values ('ci92', '128 Via del Pontier St', 'Granitola', 'Italy', 4, 100.00, 'stevebuscemi@fakemail.com');
+values ('ci92', '128 Pontier St', 'Vancouver', 'Canada', 4, 100.00, 'stevebuscemi@fakemail.com');
 
 insert into Accommodation 
-values ('ci111', '03-73A 68 Orchard Rd', 'Singapore', 'Singapore', 4, 100.00, 'hostestofthemostest@hotmail.com');
+values ('ci111', '03-73A 68 Orchard Rd', 'Vancouver', 'Canada', 4, 100.00, 'hostestofthemostest@hotmail.com');
+
 
 insert into Accommodation 
 values ('ptnt9', '100 Sing St', 'Dublin', 'Ireland', 4, 100.00, 'enya@gmail.com');
 
 insert into Accommodation 
-values ('luxr2341', '3628 Ave de Port-Royal', 'Quebec City', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
+values ('luxr2341', '3628 Ave', 'Dublin', 'Ireland', 4, 100.00, 'canadiehn@shaw.ca');
+
 
 insert into Reservation
 values('7gyk90', 2, 1607266800, 1607338800, 'qwe789',
@@ -456,13 +487,42 @@ insert into HotelRoom
 values (304,3);
 
 insert into HotelRoom
+values (203, 2);
+
+insert into HotelRoom
+values (380, 3);
+
+insert into HotelRoom
+values (801, 8);
+
+insert into HotelRoom
+values (123, 1);
+
+insert into HotelRoom
+values (888, 8);
+
+insert into HotelRoom
+values (19, 1);
+
+insert into HotelRoom
+values (67, 6);
+
+insert into HotelRoom
+values (607, 6);
+
+insert into HotelRoom
+values (399, 3);
+
+insert into HotelRoom
+
 values (1428, 14);
 
 insert into HotelRoom
 values (1969, 19);
 
 insert into HotelRoom
-values (203,2);
+values (1823,18);
+
 
 insert into HotelRoom
 values (2110, 21);
@@ -471,13 +531,35 @@ insert into Hotel
 values ('abc123', 304, 'Fairmont Hotels and Resorts');
 
 insert into Hotel
+values ('jdis32', 203, 'Fairmont Hotels and Resorts');
+
+insert into Hotel
+values ('pa123', 380, 'Fairmont Hotels and Resorts');
+
+insert into Hotel
+values ('chri1', 801, 'Fairmont Hotels and Resorts');
+
+insert into Hotel
+values ('noice91', 888, 'Big Hotel');
+
+insert into Hotel
+values ('hiw98', 19, 'Big Hotel');
+
+insert into Hotel
+values ('apow1', 67, 'The Grand Suite');
+
+insert into Hotel
+values ('ir928', 607, 'The Grand Suite');
+
+insert into Hotel
+values ('mira982', 399, 'The Grand Suite');
+
+insert into Hotel
+
 values ('duuq9', 1428, 'Hyatt Regency');
 
 insert into Hotel
 values ('eagl76', 1969, 'Hotel California');
-
-insert into Hotel
-values ('jdis32', 203, 'Fairmont Hotels and Resorts');
 
 insert into Hotel
 values ('waf14', 203, 'The Grand Budapest Hotel');
@@ -527,15 +609,71 @@ values ('ptnt9', 51.231, 'driveway');
 insert into House
 values ('luxr2341', 100.0, 'driveway');
 
-
-insert into AmenitiesIn
+insert into AmenitiesIn 
 values ('abc123', 'pool', 'Weekdays: 7am-9pm, Weekends: 8am-12pm', 0.00, 0);
 
-insert into AmenitiesIn
+insert into AmenitiesIn 
 values ('abc123', 'bar', '18:00-02:00', 15.00, 0);
 
-insert into AmenitiesIn
+insert into AmenitiesIn 
 values ('abc123', 'snacks', '24/7', 10.00, 1);
+
+insert into AmenitiesIn 
+values ('pa123', 'restaurant', '6am to 9pm', 0.00, 0);
+
+insert into AmenitiesIn 
+values ('chri1', 'restaurant', '6am to 9pm', 0.00, 0); 
+
+insert into AmenitiesIn 
+values ('apow1', 'restaurant', '7:00 - 20:00', 0.00, 0); 
+
+insert into AmenitiesIn 
+values ('chri1', 'pool', '12pm - 8pm', 0.00, 0); 
+
+insert into AmenitiesIn 
+values ('apow1', 'pool', '12pm - 8pm', 0.00, 0); 
+
+insert into AmenitiesIn 
+values ('apow1', 'bar', '6pm - 1am', 10.00, 0); 
+
+insert into AmenitiesIn 
+values ('apow1', 'snacks', '24/7', 15.00, 1); 
+
+insert into AmenitiesIn 
+values ('ir928', 'pool', '12pm - 8pm', 5.00, 0);
+
+insert into AmenitiesIn 
+values ('eagl76', 'bar', '7pm - 2am', 15.00, 0);
+
+insert into AmenitiesIn 
+values ('eagl76', 'pool', '7am - 9pm', 7.25, 0);
+
+insert into AmenitiesIn 
+values ('eagl76', 'snacks', '24/7', 15.00, 1);
+
+insert into AmenitiesIn 
+values ('waf14', 'restaurant', '4pm - 10pm', 10.00, 0);
+
+insert into AmenitiesIn 
+values ('waf14', 'bar', '6pm - 1am', 20.00, 0);
+
+insert into AmenitiesIn 
+values ('waf14', 'pool', 'Weekdays 9am to 10pm', 10.00, 0);
+
+insert into AmenitiesIn 
+values ('waf14', 'snacks', '24/7', 10.00, 1);
+
+insert into AmenitiesIn 
+values ('noice91', 'restaurant', '10am to 12am', 25.00, 0);
+
+insert into AmenitiesIn 
+values ('noice91', 'snacks', '24/7', 25.00, 1);
+
+insert into AmenitiesIn 
+values ('noice91', 'pool', '24/7', 0.00, 1);
+
+insert into AmenitiesIn 
+values ('noice91', 'bar', '5pm to 2am', 25.00, 0);
 
 insert into AmenitiesIn
 values ('j1092', 'pool', '24/7', 0.00, 1);
@@ -544,7 +682,8 @@ insert into AmenitiesIn
 values ('pais89', 'television', '24/7', 0.00, 1);
 
 insert into AmenitiesIn
-values ('abc123', 'gardens', '24/7', 0.00, 0);
+values ('mira982', 'gardens', '24/7', 0.00, 0);
+
 
 
 insert into BookDirectly
