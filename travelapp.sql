@@ -421,6 +421,7 @@ values ('mira982', '871 Benjamin St', 'Whitehorse', 'Canada', 4, 100.00, 'enya@g
 insert into Accommodation
 values ('duuq9', '2424 Kalakaua Ave', 'Honolulu', 'USA', 3, 431.25, 'hyattservice@gmail.com');
 
+
 insert into Accommodation 
 values ('eagl76', 'Boomer Street', 'Los Angeles', 'USA', 4, 100.00, 'hostestofthemostest@hotmail.com');
 
@@ -443,6 +444,7 @@ values ('ja121', '55 Some Street', 'Galway', 'Ireland', 4, 100.00, 'canadiehn@sh
 insert into Accommodation 
 values ('cpsc304', '666 Yellow Brick Rd', 'Vancouver', 'Canada', 4, 100.00, 'canadiehn@shaw.ca');
 
+
 /*Houses*/
 insert into Accommodation
 values ('no06', '81 Guentzelstrasse St', 'Hosenfeld', 'Germany', 1, 150.00, 'hostestofthemostest@hotmail.com');
@@ -453,11 +455,13 @@ values ('ci92', '128 Pontier St', 'Vancouver', 'Canada', 4, 100.00, 'stevebuscem
 insert into Accommodation 
 values ('ci111', '03-73A 68 Orchard Rd', 'Vancouver', 'Canada', 4, 100.00, 'hostestofthemostest@hotmail.com');
 
+
 insert into Accommodation 
 values ('ptnt9', '100 Sing St', 'Dublin', 'Ireland', 4, 100.00, 'enya@gmail.com');
 
 insert into Accommodation 
 values ('luxr2341', '3628 Ave', 'Dublin', 'Ireland', 4, 100.00, 'canadiehn@shaw.ca');
+
 
 insert into Reservation
 values('7gyk90', 2, 1607266800, 1607338800, 'qwe789',
@@ -510,6 +514,7 @@ insert into HotelRoom
 values (399, 3);
 
 insert into HotelRoom
+
 values (1428, 14);
 
 insert into HotelRoom
@@ -517,6 +522,7 @@ values (1969, 19);
 
 insert into HotelRoom
 values (1823,18);
+
 
 insert into HotelRoom
 values (2110, 21);
@@ -549,6 +555,7 @@ insert into Hotel
 values ('mira982', 399, 'The Grand Suite');
 
 insert into Hotel
+
 values ('duuq9', 1428, 'Hyatt Regency');
 
 insert into Hotel
@@ -676,6 +683,7 @@ values ('pais89', 'television', '24/7', 0.00, 1);
 
 insert into AmenitiesIn
 values ('mira982', 'gardens', '24/7', 0.00, 0);
+
 
 
 insert into BookDirectly
