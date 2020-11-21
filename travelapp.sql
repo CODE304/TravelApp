@@ -176,7 +176,7 @@ create table HotelRoom
     (roomNum int PRIMARY KEY, 
      hFloor int   not null);
 
- grant select on HotelRoom to public; 
+grant select on HotelRoom to public; 
 
 create table Hotel 
     (accID char(30),
@@ -203,7 +203,7 @@ create table Apartment
      FOREIGN KEY (accID) REFERENCES Accommodation(accID) ON DELETE CASCADE,
      FOREIGN KEY (roomNum) REFERENCES ApartmentRoom(roomNum) ON DELETE CASCADE);
 
- grant select on Apartment to public; 
+grant select on Apartment to public; 
 
 create table House
     (accID char(30),
@@ -225,7 +225,7 @@ create table House
      FOREIGN KEY (accID) REFERENCES Accommodation(accID) 
      ON DELETE CASCADE);
 
- grant select on AmenitiesIn to public; 
+grant select on AmenitiesIn to public; 
 
 
 create table BookDirectly 
@@ -316,6 +316,26 @@ values('ojk128', 341596324589621, 556, 'fauna_16@gmail.com');
 insert into Payment
 values('edf890', 6596832145698526, 762, 'bill_ager@yahoo.ca');
 
+insert into Payment
+values('qlf852', 4651186789654, 951, 'mar_shal@outlook.com');
+
+insert into Payment
+values('sul128', 341545321589561, 756, 'mar_shal@outlook.com');
+
+insert into Payment
+values('epyl890', 6596832145639862, 226, 'mar_shal@outlook.com');
+
+
+insert into PaymentType
+values(4651186789654, 'Visa');
+
+insert into PaymentType
+values(341545321589561, 'American Express');
+
+insert into PaymentType
+values(6596832145639862, 'Discover');
+
+
 
 insert into PaymentType
 values(4156239461332, 'Visa');
@@ -351,13 +371,22 @@ values('wp65s', 120, 'Downtown Vancouver', 'Vancouver', 'Canada', 'Dining out');
 
 
 insert into Schedules
-values('wh1tney@gmail.com', 'to23d', 1604566800, 1604577600);
+values('wh1tney@gmail.com', 'to23d', 1608493109000, 1608500309000);
+
+insert into Schedules
+values('wh1tney@gmail.com', 'jk89l', 1608752309000, 1608838709000);
 
 insert into Schedules
 values('wh1tney@gmail.com', 'sn70e', 1604577600, 1604588400);
 
 insert into Schedules
 values('kylefox@gmail.com', 'qp29l', 1604588400, 1604592000);
+
+insert into Schedules
+values('kylefox@gmail.com', 'wp65s', 1604588400, 1604592000);
+
+insert into Schedules
+values('kylefox@gmail.com', 'sn70e', 1604588400, 1604592000);
 
 insert into Schedules
 values('bill_ager@yahoo.ca', 'to23d', 1604592000, 1604602800);
@@ -468,16 +497,27 @@ values('7gyk90', 2, 1607266800, 1607338800, 'qwe789',
 'abc123', 'kylefox@gmail.com');
 
 insert into Reservation
+values('8gyk70', 2, 1605641909000, 1605728309000, 'efu264',
+'abc123', 'bill_ager@yahoo.ca');
+
+insert into Reservation
+values('10yk70', 2, 1605814709000, 1606073909000, 'efu264',
+'abc123', 'bill_ager@yahoo.ca');
+
+insert into Reservation
 values('1sth50', 5, 1607526000, 1607594400, 'efu264',
 'duuq9', 'bill_ager@yahoo.ca');
 
 insert into Reservation
 values('5dtb37', 1, 1607526000, 1607594400, 'ojk128',
-'j1092', 'fauna_16@gmail.com');
+'cpsc304', 'fauna_16@gmail.com');
 
 insert into Reservation
-values('5fh49', 3, 1607266800, 1607338800, 'efu264',
-'pais89', 'bill_ager@yahoo.ca');
+values('5pl49', 3, 1608665909000, 1608752309000, 'efu264',
+'cpsc304', 'bill_ager@yahoo.ca');
+
+insert into Reservation
+values('5fh49', 3, 1607266800, 1607338800, 'efu264', 'pais89', 'bill_ager@yahoo.ca');
 
 insert into Reservation
 values('2asd67', 4, 1607266800, 1607511600, 'ojk128',
