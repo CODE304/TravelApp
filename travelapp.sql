@@ -841,8 +841,4 @@ values ('mor918', 'wh1tney@gmail.com',1603454028);
 insert into bookBy
 values ('wv987', 'fauna_16@gmail.com',4603454028);
 insert into bookBy
-<<<<<<< HEAD
 values ('sv123', 'mar_shal@outlook.com',1603454028);
-=======
-values ('sv123', 'mar_shal@outlook.com',1603454028);
->>>>>>> updated version of sql file
