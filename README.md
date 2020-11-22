@@ -28,3 +28,7 @@ After doing all the steps above, you are now ready to view the pages that builds
 
 * Accomodations page: 
   * a working version of it : https://www.students.cs.ubc.ca/~nicerca/accommodations.php
+
+## Acknowledgements/ Licenses/ special thanks:
+* open source code for Log in page can be found in: https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=elegant-modal-login-form-with-avatar-icon
+* calendar interface (licence included in repo) can be found in: https://code.daypilot.org/17910/html5-event-calendar-open-source
