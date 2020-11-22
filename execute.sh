@@ -1,0 +1,10 @@
+chmod 755 ~/public_html/accommodations.php
+chmod 755 ~/public_html/_db.php
+chmod 755 ~/public_html/backend_create.php
+chmod 755 ~/public_html/backend_delete.php
+chmod 755 ~/public_html/backend_events.php
+chmod 755 ~/public_html/backend_move.php
+chmod 755 ~/public_html/backend_resize.php
+chmod 755 ~/public_html/index.php
+chmod 755 ~/public_html/login.php
+chmod 755 ~/public_html/userquery.php

@@ -554,7 +554,6 @@ insert into HotelRoom
 values (399, 3);
 
 insert into HotelRoom
-
 values (1428, 14);
 
 insert into HotelRoom
@@ -595,7 +594,6 @@ insert into Hotel
 values ('mira982', 399, 'The Grand Suite');
 
 insert into Hotel
-
 values ('duuq9', 1428, 'Hyatt Regency');
 
 insert into Hotel
@@ -842,3 +840,4 @@ insert into bookBy
 values ('wv987', 'fauna_16@gmail.com',4603454028);
 insert into bookBy
 values ('sv123', 'mar_shal@outlook.com',1603454028);
+
