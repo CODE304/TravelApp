@@ -25,7 +25,7 @@
         <h1>Accommodations queries </h1>
         <hr />
 
-        <h3>Insert Values into Accommodations Table</h3>
+        <h3>Insert Tuple into Accommodations Table</h3>
         <form method="POST" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
 
@@ -42,7 +42,7 @@
 
         <hr />
 
-        <h3>Delete Name in Accommodations Table</h3>
+        <h3>Delete Tuple in Accommodations Table</h3>
         <p>The values are case sensitive and if you enter in the wrong case, the update statement will not do anything.</p>
         <form method="POST" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="deleteQueryRequest" name="deleteQueryRequest">
@@ -313,7 +313,7 @@
 
             $result = executePlainSQL("SELECT * FROM Accommodation WHERE city='" . $city . "' AND country='" . $country . "'");
 
-            echo "<br>Retrieved data from table Accommodation:<br>";
+            echo "<br>Retrieved data from the Accommodation table:<br>";
             echo "<table>";
             echo "<tr><th>Accommodation ID </th><th> Address </th><th> City </th><th> Country </th><th> Capacity </th><th> Fee </th><th> Host </th></tr>";
          
