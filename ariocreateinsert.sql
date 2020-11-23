@@ -1,19 +1,20 @@
---drop table bookBy;
+drop table bookBy;
 drop table trip;
 drop table airplane;
 drop table taxi;
 drop table bus;
 drop table transportation;
+drop table userTable;
 
-/*create table bookBy
+create table bookBy
 (
-    tripID int references trip,
-    email  char(50) references user,
+    tripID char(50) references trip,
+    email  char(50) references userTable,
     bookDate int,
     primary key (tripID, email)
 );
 
-grant select on bookBy to public;*/
+grant select on bookBy to public;
 
 create table transportation
 (
@@ -67,21 +68,33 @@ create table bus
 
 grant select on bus to public;
 
+create table userTable
+(email char(50) PRIMARY KEY,
+ phoneNum int,
+ address char(50),
+ dob int,
+ fname char(20),
+ lname char(20),
+ city char(20),
+ country char (20));
 
-/*insert into bookBy
-values (00034, 'abc123@gmail.com',1603421429);
+grant select on userTable to public;
+
 
 insert into bookBy
-values (67890212, 'duuw9@yahoo.com',4603454028);
+values ('mor918', 'bill_ager@yahoo.ca',1603421429);
 
 insert into bookBy
-values (2156365, 'eagl76@gmail.com',1603454028);
+values ('st234', 'bill_ager@yahoo.ca',4603454028);
 
 insert into bookBy
-values (1414126222, 'duuw9@yahoo.com',4603454028);
+values ('mor918', 'wh1tney@gmail.com',1603454028);
 
 insert into bookBy
-values (1, 'waf14@mail.com',1603454028);*/
+values ('wv987', 'fauna_16@gmail.com',4603454028);
+
+insert into bookBy
+values ('sv123', 'mar_shal@outlook.com',1603454028);
 
 insert into transportation
 values (00034, 'Vancouver', 'Canada', 00034);
@@ -157,3 +170,23 @@ values (42060, 'Translink');
 
 insert into bus
 values (10101111111, 'Toronto Buslines');
+
+insert into userTable
+values('mar_shal@outlook.com', 7786544789, '1509-5100 Granville Street, Vancouver',
+       967852800, 'Marshal', 'Squirret', 'Vancouver', 'Canada');
+
+insert into userTable
+values('fauna_16@gmail.com', 6046534781, '1403-5100 Granville Street, Vancouver',
+       954028800, 'Fauna', 'Decena', 'Burnaby', 'Canada');
+
+insert into userTable
+values('wh1tney@gmail.com', 7784446389, '965 No 5 Road, Richmond',
+       969148800, 'Whitney', 'Foster', 'Toronto', 'Canada');
+
+insert into userTable
+values('bill_ager@yahoo.ca', 7785123698, '304 Baker Street, Burnaby',
+       949363200, 'Bill', 'Dillar', 'Seattle', 'USA');
+
+insert into userTable
+values('kylefox@gmail.com', 7789874236, '2100 Eventide Ave, Vancouver',
+       976060800, 'Kyle', 'Foster', 'Vancouver', 'Canada');
