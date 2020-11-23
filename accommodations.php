@@ -25,7 +25,7 @@
         <h1>Accommodations queries </h1>
         <hr />
 
-        <h3>Insert Tuple into Accommodations Table</h3>
+        <h3>Insert Tuple into the Accommodation Table</h3>
         <form method="POST" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="insertQueryRequest" name="insertQueryRequest">
 
@@ -42,8 +42,7 @@
 
         <hr />
 
-        <h3>Delete Tuple in Accommodations Table</h3>
-        <p>The values are case sensitive and if you enter in the wrong case, the update statement will not do anything.</p>
+        <h3>Delete Tuple in the Accommodation Table</h3>
         <form method="POST" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="deleteQueryRequest" name="deleteQueryRequest">
 
@@ -82,7 +81,7 @@
 
         <hr />
 
-        <h3> For a given accommodation, project all its amenities and their available hours </h3>
+        <h3> For a given accommodation, project its ID, all of its amenities and their available hours </h3>
         <form method="POST" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="projectQueryRequest" name="projectQueryRequest">
 
@@ -138,13 +137,13 @@
 
         <hr />
 
-        <h2>Show the Tuples in the Accommodation Table (for Insertion and Deletion) </h2>
+        <h2>Show the Tuples in the Accommodation Table (use to see Insertion and Deletion) </h2>
         <form method="GET" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="displayAccRequest" name="displayAccRequest">
             <input type="submit" name="displayAccTuples"></p>
         </form>
 
-        <h2>Show the Tuples in the BookDirectly Table (for Update) </h2>
+        <h2>Show the Tuples in the BookDirectly Table (use to see Update) </h2>
         <form method="GET" action="accommodations.php"> <!--refresh page when submitted-->
             <input type="hidden" id="displayBDRequest" name="displayBDRequest">
             <input type="submit" name="displayBDTuples"></p>
