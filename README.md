@@ -27,7 +27,7 @@ After doing all the steps above, you are now ready to view the pages that builds
   * a working version of it : https://www.students.cs.ubc.ca/~nicerca/userquery.php
 
 * Accomodations page: 
-  * a working version of it : https://www.students.cs.ubc.ca/~nicerca/accommodations.php
+  * a working version of it : https://www.students.cs.ubc.ca/~kwonny/accommodations.php
 
 * Trip page: 
   * a working version of it : https://www.students.cs.ubc.ca/~rostam2/trip.php
