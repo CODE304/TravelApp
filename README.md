@@ -2,6 +2,7 @@
 
 ## How to run:
 * clone the repo on your local machine
+  * change all instances of OCI_logon with your respective username
 * transfer the whole Travelapp folder to your ugrad server
   * scp -r TravelApp <CWLid>@remote.students.cs.ubc.ca:/home/n/<CWLid>/public_html
 * extract the folder to public_html 
