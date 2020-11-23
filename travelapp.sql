@@ -769,6 +769,12 @@ values ('st234', 'Madrid', 'Buenos Aires', 1603454028, 1603421429, 5, 42060);
 
 insert into trip
 values ('mor918', 'Mordor', 'Skyrim', 4603454028, 5503454028, 69, 10101111111);
+		 
+insert into trip
+values ('hon123', 'San Francisco', 'Honolulu', 4603454026, 5523454028, 69, 00034);
+		 
+insert into trip
+values ('broh747', 'Vancouver', 'Mordor', 4603454028, 5503454028, 69, 04500);
 
 insert into airplane
 values (00034, 'Air Canada', 'Boeing 747');
