@@ -103,7 +103,7 @@ grant select on Schedule to public;
 
 create table Payment 
     (paymentID char(50) PRIMARY KEY, 
-    cardNum int, 
+    cardNum int unique, 
     cvv int, 
     email char(50), 
     FOREIGN KEY (email) REFERENCES userTable(email) 
@@ -113,7 +113,9 @@ grant select on Payment to public;
 
 create table PaymentType 
     (cardNum int PRIMARY KEY, 
-    paymentType char(20));
+    paymentType char(20),
+    FOREIGN KEY (cardNum) REFERENCES Payment(cardNum) 
+    ON DELETE CASCADE);
 
 grant select on PaymentType to public;
 
