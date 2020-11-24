@@ -45,6 +45,16 @@
 
         <hr />
 
+        <h2>Delete User payment given cardnumber</h2>
+        <p>Label card type accordingly</p>
+        <form method="POST" action="userquery.php"> <!--refresh page when submitted-->
+            <input type="hidden" id="deleteRequest" name="deleteRequest">
+            <input type="text" name="cardNumber" placeholder="card number" ><br /><br />
+            <input type="submit" value="delete payment" name="deleteSubmit"></p>
+        </form>
+
+        <hr />
+
         <h2>Show the total time for activities in each city</h2>
         <form method="GET" action="userquery.php"> <!--refresh page when submitted-->
             <input type="hidden" id="totalTimeCity" name="totalTimeCity">
@@ -186,14 +196,14 @@
             $projectEmail = $_POST['projectEmail'];
 
 
-            $result = executePlainSQL("SELECT cardnum FROM Payment WHERE email='" . $projectEmail . "'");
+            $result = executePlainSQL("SELECT email, cardNum, cvv  FROM Payment WHERE email='" . $projectEmail . "'");
 
             echo "<br>Payment info for email $projectEmail <br>";
             echo "<table>";
-            echo "<tr><th>Card Number</th></tr>"; // headings
+            echo "<tr><th>Email</th><th>Card Number</th><th>cvv</th></tr>"; // headings
 
             while ($row = OCI_Fetch_Array($result, OCI_BOTH)) {
-                echo "<tr><td>" . $row[0] . "</td></tr>"; //or just use "echo $row[0]" per column
+                echo "<tr><td>" . $row[0] .  "</td><td>" . $row[1] . "</td><td>" . $row[2] ."</td></tr>"; //or just use "echo $row[0]" per column
             }
 
 
@@ -294,6 +304,15 @@
         }
 
 
+        function handleDeleteRequest() {
+            global $db_conn;
+            $cardNum = $_POST['cardNumber'];
+            $result = executePlainSQL("DELETE from payment where cardnum = $cardNum");
+            OCICommit($db_conn);
+
+        }
+
+
         // HANDLE ALL POST ROUTES
 	// A better coding practice is to have one method that reroutes your requests accordingly. It will make it easier to add/remove functionality.
         function handlePOSTRequest() {
@@ -306,6 +325,8 @@
                     handleHavingRequest();
                 } else if (array_key_exists('divisionRequest', $_POST)) {
                     handledivisionRequest();
+                } else if (array_key_exists('deleteRequest', $_POST)) {
+                    handleDeleteRequest();
                 }
 
                 disconnectFromDB();
@@ -327,7 +348,7 @@
             }
         }
 
-		if (isset($_POST['reset']) || isset($_POST['joinSubmit']) || isset($_POST['insertSubmit'])|| isset($_POST['projectSubmit']) || isset($_POST['havingSubmit']) || isset($_POST['divisionSubmit'])) {
+		if (isset($_POST['reset']) || isset($_POST['joinSubmit']) || isset($_POST['insertSubmit'])|| isset($_POST['projectSubmit']) || isset($_POST['havingSubmit']) || isset($_POST['divisionSubmit']) || isset($_POST['deleteSubmit'])) {
             handlePOSTRequest();
         } else if (isset($_GET['totalTimeCity'])) {
             handleGETRequest();
